@@ -1,0 +1,9 @@
+body {
+    color :red;
+    font: 100px ;
+    background-color: red; 
+}
+
+.navbar-toggle {
+    color: black;
+}
