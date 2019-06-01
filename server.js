@@ -1,10 +1,12 @@
-var express = require('express');
 const app = express();
-var fs = require('fs');
+const bodyParser = require('body-parser');
+const express = require('express');
+const fs = require('fs');
 
-const Routes = require('./route.js');
 const db = require('./database.js');
+const Routes = require('./route.js');
 
+app.use(bodyParser.json());
 app.use(Routes);
 
 db.on('error', function(err) {console.log('Database connection error',err)});

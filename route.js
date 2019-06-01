@@ -1,10 +1,13 @@
+const bodyParser = require('body-parser');
+const assert = require('assert');
 const express = require('express');
 
 const app = express();
 
+app.use(bodyParser.json());
 app.use(express.static('blood'));//Serves resources from folder blood
 
-app.get('/',function (req, res) {
+app.get('/', function (req, res) {
   fs.readFile('./blood/index.html', function(err, data) {
     if(err){
         res.writeHead(400,{'Content-Type': 'text/html'});
@@ -15,6 +18,12 @@ app.get('/',function (req, res) {
     
     res.end()
   })
+});
+
+app.post('/', function(req, res){
+  var item = {
+    Name : req.body.name,
+  }
 });
 
 module.exports = app;
