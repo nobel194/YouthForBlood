@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const assert = require('assert');
 const express = require('express');
+const fs = require('fs');
 
 const app = express();
 
@@ -23,6 +24,12 @@ app.get('/', function (req, res) {
 app.post('/', function(req, res){
   var item = {
     Name : req.body.name,
+    Address : req.body.address,
+    RHGroup : req.body.bgroup,
+    Height : req.body.height,
+    Weight : req.body.weight,
+    Phone : req.body.phone,
+    Donated : req.body.donated
   }
 });
 
