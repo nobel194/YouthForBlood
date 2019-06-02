@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
   })
 });
 
-app.post('/', function(req, res){
+app.post('/regs', function(req, res){
   var item = {
     Name : req.body.name,
     Address : req.body.address,
@@ -33,4 +33,16 @@ app.post('/', function(req, res){
   }
 });
 
+app.post('/regs', function(request, response){
+	const data = request.body;
+	console.log(data);
+Blog.insertMany([data], function(err, docs) {
+  if(err) {
+    response.send({error: err.message });
+  }
+response.send(docs);
+});
+});
+
+// app.get('/')
 module.exports = app;
