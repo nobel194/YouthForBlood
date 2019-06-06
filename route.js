@@ -1,8 +1,7 @@
-// const assert = require('assert');
 const express = require('express');
 const fs = require('fs');
 
-var router = express.Router()
+const router = express.Router();
 
 router.get('/', function (req, res) {
   fs.readFile('./blood/public/index.html', {index : false},function(err, data) {
@@ -13,18 +12,31 @@ router.get('/', function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write(data);
     
-    res.end()
+    res.end();
   })
 });
 
-router.post('/', function(req, res){
-    Name = req.body.name,
-    Address = req.body.address,
-    RHGroup = req.body.bgroup,
-    Height = req.body.height,
-    Weight = req.body.weight,
-    Phone = req.body.phone,
-    Donated= req.body.donated
+router.post('/insert', function(req, res){
+  var item = {
+  name : req.body.name,
+  email : req.body.email,
+  gender : req.body.gender,
+  dob : req.body.dob,
+  bloodgroup : req.body.bloodgroup,
+  state : req.body.state,
+  zone : req.body.zone,
+  district : req.body.district,
+  bodyweight : req.body.bodyweight,
+  address  : req.body.address,
+  cnumber : req.body.number
+  }
+  res.redirect('/');
+  db.collection('donor details').insertMany([data], function(err, docs) {
+		if(err) {
+			response.send({error: err.message });
+		}
+	response.send(docs);
+	});
 });
 
 // app.post('/regs', function(request, response){
