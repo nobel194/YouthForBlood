@@ -4,7 +4,7 @@ const app = express();
 
 const router = express.Router();
 
-app.use(express.static('blood')); //Serves resources from folder blood
+// app.use(express.static('blood')); //Serves resources from folder blood
 
 router.get('/', function (req, res) {
   fs.readFile('./blood/public/index.html',function(err, data) {
