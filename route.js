@@ -4,10 +4,10 @@ const app = express();
 
 const router = express.Router();
 
-app.use(express.static('blood', { index : false})); //Serves resources from folder blood
+app.use(express.static('blood')); //Serves resources from folder blood
 
 router.get('/', function (req, res) {
-  fs.readFile('./blood/public/index.html', {index : false},function(err, data) {
+  fs.readFile('./blood/public/index.html',function(err, data) {
     if(err){
         res.writeHead(400,{'Content-Type': 'text/html'});
         return res.end("Page error<br>404 Not Found");
@@ -19,7 +19,7 @@ router.get('/', function (req, res) {
   })
 });
 
-router.post('/insert', function(req, res){
+router.post('/regs', function(req, res){
   var item = {
   name : req.body.name,
   email : req.body.email,
