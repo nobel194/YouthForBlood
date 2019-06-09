@@ -6,7 +6,7 @@ const db = require('./database.js');
 const routes = require('./route.js');
 
 app.use(bodyParser.json());
-app.use(express.static('blood'), { index : false} ); //Serves resources from folder blood
+app.use('/',express.static(__dirname + '/blood/public', { index : false})); //Serves resources from folder blood
 
 app.use(routes);
 
