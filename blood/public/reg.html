@@ -13,7 +13,7 @@
     <title>YOUTH FOR BLOOD</title>
   </head>
   <body>
-    <div class="container-fluid">
+    
         <nav class="main-navigation">
             <div class="navbar-header animated fadeInUp">
                 <a class="navbar-brand" href="index.html">YOUTH FOR BLOOD</a>
@@ -23,7 +23,7 @@
                     <a  href="index.html" class="nav-link ">Home</a>
                 </li>
                 <li class="nav-list-item">
-                    <a class="active" href="reg.html" class="nav-link">Donor Registration</a>
+                    <a  href="reg.html" class="nav-link">Donor Registration</a>
                 </li>
                 <li class="nav-list-item">
                     <a href="dons_nearby.html" class="nav-link">Donors Nearby</a>
@@ -37,7 +37,7 @@
             </ul>
     
         </nav>
-      </div>
+      
 
     <div class="container">
         <div class="row">
@@ -53,7 +53,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <form method="POST" action="/insert">
+                                <form>
                                   <div class="form-group row">
                                     <label for="name" class="col-4 col-form-label">Name</label> 
                                     <div class="col-8">
@@ -78,7 +78,7 @@
                                   <div class="form-group row">
                                     <label for="dob" class="col-4 col-form-label">D.O.B</label> 
                                     <div class="col-8">
-                                      <input id="dob" name="dob" placeholder="Date of birth" class="form-control here" required="required" type="text">
+                                      <input id="dob" name="dob" placeholder="YY/MM/DD" class="form-control here" required="required" type="text">
                                     </div>
                                   </div>
 
@@ -100,53 +100,7 @@
                                   </div> 
 
 
-                                  <div class="form-group row">
-                                    <label for="state" class="col-4 col-form-label">State</label> 
-                                    <div class="col-8">
-                                      <select id="role" name="state" class="custom-select">
-                                        <option value="">Select State</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>  
-                                        <option value="7">7</option>                                                                                                						
-                                     </select>
-                                    </div>
-                                  </div> 
-
-                                  <div class="form-group row">
-                                    <label for="zone" class="col-4 col-form-label">Zone</label> 
-                                    <div class="col-8">
-                                      <select id="role" name="zone" class="custom-select">
-                                        <option value="">Select Zone</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>  
-                                        <option value="7">7</option>                                                                                                						
-                                     </select>
-                                    </div>
-                                  </div> 
-
-                                  <div class="form-group row">
-                                    <label for="district" class="col-4 col-form-label">District</label> 
-                                    <div class="col-8">
-                                      <select id="role" name="district" class="custom-select">
-                                        <option value="">Select District</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>  
-                                        <option value="7">7</option>                                                                                                						
-                                     </select>
-                                    </div>
-                                  </div> 
+                                  
 
                                   <div class="form-group row">
                                     <label for="bodyweight" class="col-4 col-form-label">Body Weight(kg)</label> 
@@ -171,7 +125,7 @@
                                   
                                   <div class="form-group row">
                                     <div class="offset-4 col-8">
-                                      <button name="submit" type="submit" class="btn btn-primary">Register Now</button>
+                                      <button name="submit" type="submit" class="btn btn-danger">Register Now</button>
                                     </div>
                                   </div>
                                 </form>
@@ -186,26 +140,21 @@
     <br><br>
 
 
-</footer>
-<div class="copyright-content">
-    <div class="row">
-    <div class="col-md-6">
-        <p>Copyright 2019, <a href="#">YOUTH FOR Blood</a>. All Rights Reserved.</p>
-    </div>
-    <div class="col-md-6">
-        <ul class="footer-bottom-menu">
-            <li>
-                <a href="#">Terms of Service </a>
-            </li>
-            <li>
-                <a href="#">Privacy Policy</a>
-            </li>
-        </ul>
-    </div>
-    </div>
-</div><!-- copyright end -->
-</div><!-- container end -->
-</footer>
+
+ <!--Bottom Footer-->
+ <div class="bottom section-padding">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12 text-center">
+              <div class="copyright">
+                  <p>© <span>2019</span> <a href="index.html" class="transition">YOUTH FOR BLOOD</a> All rights reserved.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!--Bottom Footer-->
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
